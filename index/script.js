@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	}
 	function logoVisible() {
 		console.log(1)
-		window.location.href = "../showPic/index.html";
+		window.location.href = "showPic/index.html";
   		// logofix.classList.add("visible");
   		// resetbutton.classList.add('visible');
   		// ani.classList.add("notvisible");
