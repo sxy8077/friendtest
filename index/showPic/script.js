@@ -8,11 +8,12 @@ if (navigationEntries.length && navigationEntries[0].type === "reload") {
   
 const cols = 3;
 const main = document.getElementById('main');
+let textDiv = document.getElementById('text')
 let parts = [];
 
 let images = [
   "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
-  "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+  "./pic.webp",
   "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
 ];
 let current = 0;
@@ -20,6 +21,22 @@ let playing = false;
 
 for (let i in images) {
   new Image().src = images[i];
+}
+
+function changeText(num) {
+  switch (num) {
+    case 0:
+      textDiv.textContent = "000"
+      break;
+    case 1:
+      textDiv.textContent = "111"
+      break;
+    case 2:
+      textDiv.textContent = "222"
+      break;
+    default:
+      break;
+  }
 }
 
 for (let col = 0; col < cols; col++) {
@@ -47,7 +64,8 @@ function go(dir) {
     if (current + dir < 0) current = images.length - 1;
     else if (current + dir >= images.length) current = 0;
     else current += dir;
-
+    console.log(current)
+    changeText(current)
     function up(part, next) {
       part.appendChild(next);
       gsap.to(part, {...animOptions, y: -window.innerHeight}).then(function () {
