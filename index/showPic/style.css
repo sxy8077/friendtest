@@ -28,7 +28,7 @@ body {
 #main .part .section img {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   left: var(--x);
   pointer-events: none;
@@ -91,10 +91,11 @@ h1 {
   right: 0;
   margin: auto;
   z-index: 99;
-  color: white;
+  color: 	black;
   text-align: center;
   font-size: 2.6em;
-  mix-blend-mode: overlay;
+  opacity: 0.55;
+  /* mix-blend-mode: overlay; */
   pointer-events: none;
 }
 .content {

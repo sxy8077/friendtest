@@ -12,9 +12,24 @@ let textDiv = document.getElementById('text')
 let parts = [];
 
 let images = [
-  "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
-  "./pic.webp",
-  "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+  "../pic/1.jpg", //0
+  "../pic/2.jpg",
+  "../pic/3.jpg",
+  "../pic/3.1.jpg", //3
+  "../pic/4.jpg", //4
+  "../pic/4.1.jpg", //5
+  "../pic/6.jpg", //6
+  "../pic/6.1.jpg", //7
+  "../pic/6.2.jpg", //8
+  "../pic/6.3.jpg", //9
+  "../pic/7.jpg", //10
+  "../pic/7.1.jpg", //11
+  "../pic/7.2.jpg", //12
+  "../pic/8.jpg", //13
+  "../pic/8.1.jpg", //14
+  "../pic/9.jpg", //15
+  "../pic/11.jpg", //16
+  "../pic/10.jpg", //17
 ];
 let current = 0;
 let playing = false;
@@ -26,13 +41,58 @@ for (let i in images) {
 function changeText(num) {
   switch (num) {
     case 0:
-      textDiv.textContent = "000"
+      textDiv.innerHTML = "2023年12月30日 <br> 时隔一年又神奇的聊上了"
       break;
     case 1:
-      textDiv.textContent = "111"
+      textDiv.textContent = "咱就说那么有计划的女孩子谁不爱"
       break;
     case 2:
-      textDiv.textContent = "222"
+      textDiv.textContent = "学到了美拉德搭配"
+      break;
+    case 3:
+      textDiv.innerHTML = "不多说，好看就完事了！<br>PS：挡脸不是有意的"
+      break;
+    case 4:
+      textDiv.innerHTML = "红红火火跨新年"
+      break;
+    case 5:
+      textDiv.innerHTML = " "
+      break;
+    case 6:
+      textDiv.innerHTML = "看看这越来越好的厨艺"
+      break;
+    case 7:
+      textDiv.innerHTML = "鲜汤轻松拿下！"
+      break;
+    case 8:
+      textDiv.innerHTML = "我喜欢这虾仁"
+      break;
+    case 9:
+      textDiv.innerHTML = "三文鱼这次迟到了"
+      break;
+    case 10:
+      textDiv.innerHTML = "国内美食等你回来一起吃！"
+      break;
+    case 11:
+      textDiv.innerHTML = "国内美食等你回来一起吃！"
+      break;
+    case 12:
+      textDiv.innerHTML = "国内美食等你回来一起吃！"
+      break;
+    case 13:
+      textDiv.innerHTML = "特别感谢你的小礼物！"
+      break;
+    case 14:
+      textDiv.innerHTML = "特别感谢你的小礼物！"
+      break;
+    case 15:
+      textDiv.innerHTML = "祝福最后一学期顺利毕业！"
+      break;
+    case 16:
+      textDiv.innerHTML = "同时身材棒棒！"
+      break;
+    case 17:
+      textDiv.innerHTML = "也希望可以更加快乐，赶走EMO！友谊长存！"
       break;
     default:
       break;
